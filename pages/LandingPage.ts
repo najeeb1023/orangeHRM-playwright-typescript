@@ -21,7 +21,8 @@ export class LoginPage{
        await this.LoginPageLocators.username()
        await this.LoginPageLocators.password()
        await this.LoginPageLocators.loginBtn()
-       expect(this.page.getByText('Time at Work')).toBeAttached()
+       await expect(this.page.getByText('Time at Work')).toBeAttached()
+       
 
        
        
