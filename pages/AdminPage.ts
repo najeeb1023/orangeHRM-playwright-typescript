@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 
 export class AdminPage {
 
@@ -10,6 +10,7 @@ export class AdminPage {
 
     async goToAdminTab(){
         await this.adminPageLocators.adminTab().click()
+        await expect(this.page.getByText('System Users')).toBeAttached()
 
     }
 
