@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LandingPage';
 import { AdminPage } from '../pages/AdminPage';
 
-test('Go To Website & Login', async ({ page }) => {
+test('Go To Website & Login User', async ({ page }) => {
   
   let loginPage = new LoginPage(page)
   await loginPage.visitPageAndLoginUser()
